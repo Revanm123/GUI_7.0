@@ -20,19 +20,20 @@ function LeftNav(props) {
         <Link className="cmd-btn nav-link" to="/data">
           <div>Home</div>
         </Link>
-        <Link className="cmd-btn nav-link" to="/soh">
-          <div>SOH</div>
-        </Link>
         <Link className="cmd-btn nav-link" to="/graphs">
           <div>Graphs</div>
+        </Link>
+        <Link className="cmd-btn nav-link" to="/data/StateDiagram">
+          <div>State Diagram</div>
         </Link>
       </div>
       <h4 style={{ marginBottom: "0.5rem", fontSize: "1.2em" }}>Sub-Modules</h4>
       {[
         { href: "/data/levitation", label: "Levitation" },
-        { href: "/data/battery", label: "Battery Packs" },
+        { href: "/data/battery", label: "Primary Battery Pack" },
+        { href: "/data/battery1", label: "Secondary Battery Pack" },
+        { href: "/data/thermal", label: "Thermal" },
         { href: "/data/propulsion", label: "Propulsion" },
-        { href: "/data/StateDiagram", label: "State Diagram" },
       ].map((subpage) => {
         return (
           <Link className="nav-link" to={subpage.href}>

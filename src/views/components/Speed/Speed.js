@@ -25,6 +25,15 @@ function Speed(props) {
             </div>
           </Col>
         </Row>
+        <div style={{marginTop:'1rem'}}>
+          <Row>
+          <Col>
+            <span className={`stage-text ${props.stage === 'Cruising' ? 'active-stage' : ''}`}>
+            <span className="stage-circle"></span>DC Braking
+            </span>
+          </Col>
+          </Row>  
+          </div>
       </Container>
     </Container>
   );

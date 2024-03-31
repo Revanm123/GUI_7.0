@@ -17,7 +17,6 @@ function ThreePhase(props) {
             style={{ borderRight: "rgba(200,200,200,0.5) dotted 1px" }}
             lg={8}
           >
-            <h4 style={{ textAlign: "center" }}>Three Phase Current</h4>
             <Row
               style={{
                 fontWeight: "bold",

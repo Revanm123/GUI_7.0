@@ -13,7 +13,9 @@ let mqtt = require("mqtt");
 let { Home } = require("../views/pages/Home.js");
 let { Levitation } = require("../views/pages/Levitation.js");
 let { Propulsion } = require("../views/pages/Propulsion.js");
+let { Thermal } = require("../views/pages/Thermal.js");
 let { Battery } = require("../views/pages/Battery.js");
+let { Battery1 } = require("../views/pages/Battery1.js");
 let host = "localhost";
 let port = 1884;
 const url = `ws://${host}:${port}/mqtt`;
@@ -452,8 +454,85 @@ function ServerReceive() {
                 Ic_error: message65,
               }} />
             </Route>
+            <Route exact path="/data/thermal">
+              <Thermal
+              speed={message4}
+              busbarVoltage={message8} 
+              ipmdata = {{
+                Ia: message59,
+                Ib: message60,
+                Ic: message61,
+                ipmtemp: message62,
+                overtemp: message66,
+                Ia_error: message63,
+                Ib_error: message64,
+                Ic_error: message65,
+              }} />
+            </Route>
             <Route exact path="/data/battery">
               <Battery
+                lmu1={{
+                  temp1: message23,
+                  temp2: message24,
+                }}
+                lmu2={{
+                  temp1: message26,
+                  temp2: message27,
+                }}
+                lmu3={{
+                  temp1: message29,
+                  temp2: message30,
+                }}
+                lmu4={{
+                  temp1: message32,
+                  temp2: message33,
+                }}
+                lmu5={{
+                  temp1: message35,
+                  temp2: message36,
+                }}
+                lmu6={{
+                  temp1: message38,
+                  temp2: message39,
+                }}
+                lmu7={{
+                  temp1: message41,
+                  temp2: message42,
+                }}
+                lmu8={{
+                  temp1: message44,
+                  temp2: message45,
+                }}
+                lmu9={{
+                  temp1: message47,
+                  temp2: message48,
+                }}
+                lmu10={{
+                  temp1: message25,
+                  temp2: message28,
+                }}
+                lmu11={{
+                  temp1: message31,
+                  temp2: message34,
+                }}
+                lmu12={{
+                  temp1: message57,
+                  temp2: message58,
+                }}
+                minvolt={getMinimumNumber([
+                  message24,
+                  message27,
+                  message30,
+                  message33,
+                  message36,
+                  message39,
+                  message42,
+                  message45,
+                ])}
+              />
+            </Route>
+            <Route exact path="/data/battery1">
+              <Battery1
                 lmu1={{
                   temp1: message23,
                   temp2: message24,

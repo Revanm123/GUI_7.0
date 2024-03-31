@@ -1,0 +1,30 @@
+.stage-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .stage-text {
+    color: #ccc;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #28a745, 0 0 20px #28a745;
+    }
+    100% {
+      box-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 30px #28a745, 0 0 40px #28a745;
+    }
+  }
+  
+  .active-stage {
+    color: #28a745;
+  }
+  
+  .active-stage .stage-circle {
+    background-color: #28a745;
+    animation: glow 2s infinite;
+  }

@@ -36,9 +36,33 @@ function Levitation(props) {
               <h4 className="sub-heading">2</h4>
             </Col>
           </Row>
+        <Row>
+        <Col lg={2}></Col>
+        <Col lg={3} className="data-btn">
+          <h3 className="data">H-bridge</h3>
+          <h3 className="data">{props.temp1} °C</h3>
+        </Col>
+        <Col lg={2}></Col>
+        <Col lg={3} className="data-btn">
+          <h3 className="data">H-bridge</h3>
+          <h3 className="data">{props.temp2} °C</h3>
+        </Col>
+        </Row>
           <Row>
             <Image className="pod-img" src={vtems} />
           </Row>
+          <Row>
+        <Col lg={2}></Col>
+        <Col lg={3} className="data-btn">
+          <h3 className="data">H-bridge</h3>
+          <h3 className="data">{props.temp1} °C</h3>
+        </Col>
+        <Col lg={2}></Col>
+        <Col lg={3} className="data-btn">
+          <h3 className="data">H-bridge</h3>
+          <h3 className="data">{props.temp2} °C</h3>
+        </Col>
+        </Row>
           <Row>
             <Col lg={3}></Col>
             <Col lg={1} className="box-shadow-small ">

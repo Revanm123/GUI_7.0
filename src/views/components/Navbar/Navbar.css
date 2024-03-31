@@ -11,6 +11,58 @@
 .btn-white button {
   filter: invert(1);
 }
+.connection-icon {
+  align-items: center;
+  margin-right: 40px;
+  font-size: 24px;
+  color: green;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+}
+.text-center {
+  color: white;
+  justify-content: center;
+}
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+.connection-status {
+  margin-right: 14px;
+}
+.connection-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.connection-status {
+  color: #ccc;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.active-connection {
+  color: #28a745;
+  animation: blink 1s infinite;
+}
+
+.active-connection .connection-circle {
+  background-color: #28a745;
+  animation: glow 2s infinite;
+}
 /* 
 .nav-link {
   text-align: center;

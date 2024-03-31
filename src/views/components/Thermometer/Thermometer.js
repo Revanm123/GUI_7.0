@@ -6,7 +6,7 @@ import "./Thermometer.css";
 
 function ThermometerComp(props) {
   const tempSections = [
-    { name: "EMS", temp: props.temp1 },
+    { name: "HEMS", temp: props.temp1 },
     { name: "LIM", temp: props.temp2 },
   ];
   return (

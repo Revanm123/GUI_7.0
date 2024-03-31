@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import { Container, Row } from "react-bootstrap";
 import "../commonStyles.css";
 
-function TabulatedData({ title, data }) {
+function TabulatedData({ title, data, showSerialNumbers = true }) {
   return (
     <Container className="white-text">
       <h4 style={{ marginTop: "0.6rem" }}>{title}</h4>
@@ -16,7 +16,7 @@ function TabulatedData({ title, data }) {
           {data.map((reading, i) => {
             return (
               <tr>
-                <td>{i + 1}</td>
+                {showSerialNumbers && <td>{i + 1}</td>}
                 <td>{reading}</td>
               </tr>
             );

@@ -7,6 +7,9 @@ import EmergencyStopButton from "./EmergencyStopButton";
 
 function Navbar() {
   const [showmenu, setShowmenu] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState(false);
+  const [podState, setPodState] = useState('Idle');
+  
   const handleEmergencyStop = () => {
     console.log('Emergency brakes actuated');
     console.log('Pod stopped!');
@@ -79,29 +82,24 @@ function Navbar() {
               }}
               src={logo}
             />
+
           </Col>
-          <Col style={{ color: "white", textAlign: "right" }} lg={10}>
-            <div>
-              {
-                [
-                  "Sunday",
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                ][date.getDay()]
-              }
-              , {date.toLocaleDateString()}
-            </div>
-            <div>
-              {date.toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </div>  
-          </Col>
+          <Col style={{ borderRadius:'2%' , backgroundColor: '#0cbe46', color: 'black', textAlign: 'center',padding: '1px' ,marginLeft: '25%'}} md={2}>
+    <p className="glow-button"></p>
+    <p className="pod-state">
+      <span className={`pod-state ${podState}`}>
+        {podState}
+      </span>
+    </p>
+  </Col>
+          <Col style={{ color: "white", textAlign: "right", position: 'absolute', top: '2px', right: 0 }} lg={10}>
+  <p className="glow-button">Connection Status</p>
+  <p className="connection-status">
+    <span className={`connection-status ${'active-connection' ? 'active-connection' : ''}`}>
+      <span className="connection-circle"></span>Connected
+    </span>
+  </p>
+</Col>
           {/* <Col lg={2}>{showmenu && <div style={{ color: "white" }}>hi</div>}</Col> */}
           <EmergencyStopButton onStopClick={handleEmergencyStop} />
         </Row>

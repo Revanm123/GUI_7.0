@@ -1,0 +1,53 @@
+.bg-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .bg-img {
+    height: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+  }
+  
+  .small-text {
+    font-size: small;
+  }
+  
+  .top {
+    margin-top: -1rem !important;
+  }
+  
+  .bottom {
+    margin-top: 2rem !important;
+  }
+  
+  .heading {
+    margin-top: 10px !important;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+  }
+  
+  .white-text {
+    color: white;
+    font: bold;
+  
+  }
+  .box {
+    transition: all 0.3s ease;
+  }
+  
+  .box:hover {
+    width: auto;
+    min-width: 50px;
+    padding: 10px;
+    z-index: 2;
+  }
+  

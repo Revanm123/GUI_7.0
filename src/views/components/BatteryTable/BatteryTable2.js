@@ -3,11 +3,10 @@ import { Table } from "react-bootstrap";
 import { Container, Row } from "react-bootstrap";
 import "../commonStyles.css";
 
-function BatteryTable(props) {
+function BatteryTable2(props) {
   return (
     <Container>
       <Container className="sub-section white-text">
-        <h4>Battery Pack</h4>
         <Table
           style={{ width: "90%", borderRadius: "1rem", margin: "auto" }}
           bordered
@@ -42,6 +41,10 @@ function BatteryTable(props) {
               <th>SOC</th>
               <th>{props.soc}%</th>
             </tr>
+            <tr>
+              <th>SOH</th>
+              <th>{props.soh}%</th>
+            </tr>
           </tbody>
         </Table>
       </Container>
@@ -49,4 +52,4 @@ function BatteryTable(props) {
   );
 }
 
-export { BatteryTable };
+export { BatteryTable2 };

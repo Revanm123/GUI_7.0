@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import pod from "../../../assets/pod.svg";
 import "../commonStyles.css";
-
+import "./position.css";
 function Position(props) {
   const [position, setPos] = useState(0);
   useEffect(() => {
@@ -69,6 +69,20 @@ function Position(props) {
             </span>
           </Col>
         </Row>
+        <div>
+          <Row>
+          <Col>
+            <span className={`stage-text ${'Booster' === 'Booster' ? 'active-stage' : ''}`}>
+            <span className="stage-circle"></span> Booster
+            </span>
+          </Col>
+          <Col>
+            <span className={`stage-text ${props.stage === 'Cruising' ? 'active-stage' : ''}`}>
+            <span className="stage-circle"></span> Cruising
+            </span>
+          </Col>
+          </Row>  
+          </div>
       </Container>
     </Container>
   );

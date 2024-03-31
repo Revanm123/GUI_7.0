@@ -14,21 +14,20 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "ejs": "^3.1.9",
-    "express": "^4.18.3",
+    "express": "^4.18.2",
     "framer-motion": "^4.1.17",
     "mqtt": "^4.3.8",
-    "plotly.js": "^2.29.1",
+    "plotly.js": "^2.29.0",
     "plotly.js-dist": "^2.30.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-bootstrap-icons": "^1.10.2",
+    "react-connect-elements": "^0.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "3.4.1",
-    "react-sound": "^1.2.0",
     "react-thermometer": "^0.0.3",
-    "react-thermometer-component": "^1.0.1",
-    "react-toastify": "^10.0.4"
+    "react-thermometer-component": "^1.0.1"
   },
   "browserslist": {
     "production": [
@@ -44,5 +43,8 @@
   },
   "volta": {
     "node": "16.13.1"
+  },
+  "devDependencies": {
+    "electron": "^24.3.1"
   }
 }

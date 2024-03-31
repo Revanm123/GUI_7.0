@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-table {
+    margin-bottom: 20px;
+  }
+  
+  .line-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  
+  /* Adjust the size of the tables as needed */
+  .table {
+    width: 100%;
+    max-width: 100%;
+  }
